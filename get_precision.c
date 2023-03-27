@@ -39,4 +39,7 @@ int get_precision(const char *format, int *i, va_list list)
 
 	return (precision);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 09b5a8e73b49e7025b1cb8935eee3106a5706b87
