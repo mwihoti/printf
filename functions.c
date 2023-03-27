@@ -1,8 +1,6 @@
 #include "main.h"
 
-
 /************************* PRINT CHAR *************************/
-
 
 /**
  * print_char - Prints a char
@@ -21,7 +19,6 @@ int print_char(va_list types, char buffer[],
 
 	return (handle_write_char(c, buffer, flags, width, precision, size));
 }
-
 /************************* PRINT A STRING *************************/
 /**
  * print_string - Prints a string
@@ -33,7 +30,6 @@ int print_char(va_list types, char buffer[],
  * @size: Size specifier
  * Return: Number of chars printed
  */
-
 int print_string(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
@@ -78,9 +74,7 @@ int print_string(va_list types, char buffer[],
 
 	return (write(1, str, length));
 }
-
 /************************* PRINT PERCENT SIGN *************************/
-
 /**
  * print_percent - Prints a percent sign
  * @types: Lista of arguments
@@ -158,10 +152,12 @@ int print_int(va_list types, char buffer[],
  * @size: Size specifier
  * Return: Numbers of char printed.
  */
-
 int print_binary(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 17a2c565858cabbd055b230712e473a97a622c63
 {
 	unsigned int n, m, i, sum;
 	unsigned int a[32];
@@ -175,18 +171,27 @@ int print_binary(va_list types, char buffer[],
 
 	n = va_arg(types, unsigned int);
 	m = 2147483648; /* (2 ^ 31) */
+<<<<<<< HEAD
 
+=======
+>>>>>>> 17a2c565858cabbd055b230712e473a97a622c63
 	a[0] = n / m;
 	for (i = 1; i < 32; i++)
 	{
 		m /= 2;
 		a[i] = (n / m) % 2;
 	}
+<<<<<<< HEAD
 
 	for (i = 0, sum = 0, count = 0; i < 32; i++)
 	{
 		sum += a[i];
 
+=======
+	for (i = 0, sum = 0, count = 0; i < 32; i++)
+	{
+		sum += a[i];
+>>>>>>> 17a2c565858cabbd055b230712e473a97a622c63
 		if (sum || i == 31)
 		{
 			char z = '0' + a[i];
@@ -196,5 +201,9 @@ int print_binary(va_list types, char buffer[],
 		}
 	}
 	return (count);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 17a2c565858cabbd055b230712e473a97a622c63
 }
+
